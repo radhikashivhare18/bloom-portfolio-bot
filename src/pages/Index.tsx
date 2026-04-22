@@ -89,7 +89,7 @@ const Hero = () => (
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
+        transition={{ duration: 1.2, ease: easeOut, delay: 0.2 }}
         className="lg:col-span-5 relative"
       >
         <div className="relative">
