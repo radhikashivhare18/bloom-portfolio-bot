@@ -1,11 +1,13 @@
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import { Github, Linkedin, Mail, ArrowDown, Sparkles } from "lucide-react";
 import heroPortrait from "@/assets/hero-portrait.jpg";
 import safespaceImg from "@/assets/project-safespace.jpg";
 
-const fadeUp = {
+const easeOut = [0.22, 1, 0.36, 1] as const;
+
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 24 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } },
+  show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: easeOut } },
 };
 
 const Nav = () => (
