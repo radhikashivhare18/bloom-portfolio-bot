@@ -189,7 +189,7 @@ const Skills = () => {
     { title: "Programming", items: ["C", "C++"] },
     { title: "Tools & Design", items: ["Canva", "Lovable", "AI-assisted no-code"] },
     { title: "Soft Skills", items: ["Teamwork", "Problem-solving", "Hardworking", "Empathy"] },
-    { title: "Currently learning", items: ["HTML & CSS", "JavaScript", "Web development"] },
+    { title: "Currently learning", items: ["C & C++", "DSA", "JavaScript", "Web development"] },
   ];
   return (
     <section id="skills" className="py-32 bg-foreground text-background relative overflow-hidden">
