@@ -334,18 +334,21 @@ const Projects = () => (
           subtitle: "Technical Team Member",
           body: "Helping organize and run coding events, workshops, and peer-learning sessions on campus.",
         },
-      ].map((p) => (
+      ].map((p, i) => (
         <motion.div
           key={p.title}
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="bg-cream-deep/60 border border-border rounded-3xl p-8 hover:bg-cream-deep transition-colors"
+          transition={{ duration: 0.6, delay: i * 0.1 }}
         >
-          <p className="text-xs uppercase tracking-widest text-peach mb-3">{p.subtitle}</p>
-          <h4 className="font-display text-2xl mb-3">{p.title}</h4>
-          <p className="text-muted-foreground">{p.body}</p>
+          <TiltCard max={5} lift={5} className="rounded-3xl h-full">
+            <div className="glass rounded-3xl p-8 h-full shadow-3d">
+              <p className="text-xs uppercase tracking-widest text-peach mb-3">{p.subtitle}</p>
+              <h4 className="font-display text-2xl mb-3">{p.title}</h4>
+              <p className="text-muted-foreground">{p.body}</p>
+            </div>
+          </TiltCard>
         </motion.div>
       ))}
     </div>
