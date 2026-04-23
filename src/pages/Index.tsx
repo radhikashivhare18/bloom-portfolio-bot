@@ -231,24 +231,27 @@ const Skills = () => {
             A beginner's toolkit, growing every week. Honest about where I am, hungry for where I'm going.
           </p>
         </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-background/10 border border-background/10 rounded-3xl overflow-hidden">
-          {groups.map((g) => (
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {groups.map((g, i) => (
             <motion.div
               key={g.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="bg-foreground p-8 hover:bg-background/[0.04] transition-colors group"
+              transition={{ duration: 0.6, delay: i * 0.08 }}
             >
-              <p className="text-peach text-xs uppercase tracking-widest mb-6">{g.title}</p>
-              <ul className="space-y-3">
-                {g.items.map((item) => (
-                  <li key={item} className="font-display text-2xl group-hover:translate-x-1 transition-transform duration-500">
-                    {item}
-                  </li>
-                ))}
-              </ul>
+              <TiltCard max={7} lift={6} className="rounded-2xl">
+                <div className="glass-dark rounded-2xl p-8 h-full shadow-3d group">
+                  <p className="text-peach text-xs uppercase tracking-widest mb-6">{g.title}</p>
+                  <ul className="space-y-3">
+                    {g.items.map((item) => (
+                      <li key={item} className="font-display text-2xl group-hover:translate-x-1 transition-transform duration-500">
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </TiltCard>
             </motion.div>
           ))}
         </div>
