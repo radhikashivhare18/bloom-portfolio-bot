@@ -82,6 +82,8 @@ export default {
         soft: "var(--shadow-soft)",
         elegant: "var(--shadow-elegant)",
         glow: "var(--shadow-glow)",
+        "3d": "var(--shadow-3d)",
+        lift: "var(--shadow-lift)",
       },
       borderRadius: {
         lg: "var(--radius)",
