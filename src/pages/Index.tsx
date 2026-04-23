@@ -1,7 +1,9 @@
-import { motion, type Variants } from "framer-motion";
+import { motion, useScroll, useTransform, type Variants } from "framer-motion";
+import { useRef } from "react";
 import { Github, Linkedin, Mail, ArrowDown, Sparkles } from "lucide-react";
 import heroPortrait from "@/assets/hero-portrait.jpg";
 import safespaceImg from "@/assets/project-safespace.jpg";
+import { TiltCard } from "@/components/TiltCard";
 
 const easeOut = [0.22, 1, 0.36, 1] as const;
 
