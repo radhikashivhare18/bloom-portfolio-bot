@@ -440,7 +440,7 @@ const Contact = () => (
           href="https://www.linkedin.com/in/radhika-shivhare-92a7653a9"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-3 rounded-full border border-background/30 px-8 py-4 text-sm hover:bg-background/10 transition-colors"
+          className="inline-flex items-center gap-3 rounded-full border border-background/30 px-8 py-4 text-sm hover:bg-background/10 hover:-translate-y-0.5 hover:shadow-lift transition-all duration-300"
         >
           <Linkedin className="h-4 w-4" />
           LinkedIn
@@ -449,7 +449,7 @@ const Contact = () => (
           href="https://github.com/radhikashivhare18"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-3 rounded-full border border-background/30 px-8 py-4 text-sm hover:bg-background/10 transition-colors"
+          className="inline-flex items-center gap-3 rounded-full border border-background/30 px-8 py-4 text-sm hover:bg-background/10 hover:-translate-y-0.5 hover:shadow-lift transition-all duration-300"
         >
           <Github className="h-4 w-4" />
           GitHub
