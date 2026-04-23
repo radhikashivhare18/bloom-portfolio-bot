@@ -269,55 +269,58 @@ const Projects = () => (
       </h2>
     </div>
 
-    <motion.article
+    <motion.div
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.9 }}
-      className="group grid lg:grid-cols-12 gap-10 items-center bg-card border border-border rounded-3xl p-8 md:p-12 hover:shadow-elegant transition-all duration-500"
     >
-      <div className="lg:col-span-6 relative overflow-hidden rounded-2xl bg-sage-light">
-        <img
-          src={safespaceImg}
-          alt="SafeSpace platform illustration"
-          width={1280}
-          height={960}
-          loading="lazy"
-          className="w-full h-auto group-hover:scale-105 transition-transform duration-700"
-        />
-      </div>
-      <div className="lg:col-span-6">
-        <div className="flex items-center gap-3 text-xs uppercase tracking-widest text-muted-foreground mb-4">
-          <span className="h-2 w-2 rounded-full bg-peach" />
-          Featured project
-          <span>· Top 5 Ideathon</span>
+      <TiltCard as="article" max={4} lift={6} className="rounded-3xl">
+        <div className="group grid lg:grid-cols-12 gap-10 items-center glass rounded-3xl p-8 md:p-12 shadow-3d hover:shadow-lift transition-shadow duration-500">
+          <div className="lg:col-span-6 relative overflow-hidden rounded-2xl bg-sage-light shadow-soft">
+            <img
+              src={safespaceImg}
+              alt="SafeSpace platform illustration"
+              width={1280}
+              height={960}
+              loading="lazy"
+              className="w-full h-auto group-hover:scale-105 transition-transform duration-700"
+            />
+          </div>
+          <div className="lg:col-span-6">
+            <div className="flex items-center gap-3 text-xs uppercase tracking-widest text-muted-foreground mb-4">
+              <span className="h-2 w-2 rounded-full bg-peach animate-pulse" />
+              Featured project
+              <span>· Top 5 Ideathon</span>
+            </div>
+            <h3 className="font-display text-4xl md:text-5xl font-light mb-5">
+              SafeSpace
+            </h3>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+              A campus mental health support platform built to give students a quiet place to land. Designed during an ideathon, built with AI-assisted no-code tools, and shaped by genuine care for student well-being.
+            </p>
+            <div className="flex flex-wrap gap-2 mb-8">
+              {[
+                "Buddy Help",
+                "Mood Tracker",
+                "Private Diary",
+                "Venting Wall",
+                "Breathing Exercises",
+                "Emergency Contacts",
+                "Attendance Calculator",
+              ].map((f) => (
+                <span key={f} className="px-3 py-1.5 rounded-full bg-secondary/50 text-secondary-foreground text-xs hover:-translate-y-0.5 hover:bg-secondary transition-all duration-300">
+                  {f}
+                </span>
+              ))}
+            </div>
+            <a href="https://github.com/radhikashivhare18" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm underline-grow">
+              View on GitHub <Github className="h-4 w-4" />
+            </a>
+          </div>
         </div>
-        <h3 className="font-display text-4xl md:text-5xl font-light mb-5">
-          SafeSpace
-        </h3>
-        <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-          A campus mental health support platform built to give students a quiet place to land. Designed during an ideathon, built with AI-assisted no-code tools, and shaped by genuine care for student well-being.
-        </p>
-        <div className="flex flex-wrap gap-2 mb-8">
-          {[
-            "Buddy Help",
-            "Mood Tracker",
-            "Private Diary",
-            "Venting Wall",
-            "Breathing Exercises",
-            "Emergency Contacts",
-            "Attendance Calculator",
-          ].map((f) => (
-            <span key={f} className="px-3 py-1.5 rounded-full bg-secondary/50 text-secondary-foreground text-xs">
-              {f}
-            </span>
-          ))}
-        </div>
-        <a href="https://github.com/radhikashivhare18" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm underline-grow">
-          View on GitHub <Github className="h-4 w-4" />
-        </a>
-      </div>
-    </motion.article>
+      </TiltCard>
+    </motion.div>
 
     <div className="mt-10 grid md:grid-cols-2 gap-6">
       {[
