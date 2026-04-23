@@ -13,7 +13,7 @@ const fadeUp: Variants = {
 };
 
 const Nav = () => (
-  <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-cream/70 border-b border-border/50">
+  <header className="fixed top-0 left-0 right-0 z-50 glass shadow-soft">
     <nav className="container flex items-center justify-between py-4">
       <a href="#home" className="font-display text-xl font-medium tracking-tight">
         Radhika<span className="text-peach">.</span>
@@ -29,7 +29,7 @@ const Nav = () => (
       </ul>
       <a
         href="mailto:radhikaa031818@gmail.com"
-        className="hidden md:inline-flex items-center gap-2 rounded-full bg-foreground text-background px-5 py-2 text-sm hover:bg-peach transition-colors"
+        className="hidden md:inline-flex items-center gap-2 rounded-full bg-foreground text-background px-5 py-2 text-sm hover:bg-peach hover:-translate-y-0.5 hover:shadow-lift transition-all duration-300"
       >
         Say hello
       </a>
