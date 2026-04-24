@@ -116,17 +116,17 @@ const Hero = () => {
           style={{ y: portraitY, rotate: portraitRotate }}
           className="lg:col-span-5 relative"
         >
-          <TiltCard max={8} lift={4} className="rounded-[2rem]">
-            <div className="absolute -inset-8 rounded-[2rem] bg-gradient-to-br from-hero-purple/30 via-hero-blue/20 to-transparent blur-3xl" aria-hidden />
-            <div className="relative overflow-hidden rounded-[2rem] border border-background/70 bg-gradient-hero-card p-8 md:p-10 shadow-hero backdrop-blur-xl animate-float min-h-[420px] flex flex-col justify-center">
+          <TiltCard max={3} lift={2} className="group rounded-[2rem]">
+            <div className="absolute -inset-6 rounded-[2rem] bg-gradient-to-br from-hero-purple/20 via-hero-blue/15 to-transparent blur-3xl opacity-80" aria-hidden />
+            <div className="relative overflow-hidden rounded-[2rem] border border-background/70 bg-gradient-hero-card p-8 md:p-11 shadow-hero backdrop-blur-xl animate-float min-h-[420px] flex flex-col justify-center">
               <div className="pointer-events-none absolute inset-px rounded-[2rem] border border-background/50" aria-hidden />
               <div className="relative animate-fade-up">
-                <p className="text-xs uppercase tracking-[0.32em] text-muted-foreground mb-7">Portfolio</p>
-                <h2 className="font-display text-5xl md:text-6xl font-bold leading-[0.94] tracking-wide bg-gradient-name bg-clip-text text-transparent drop-shadow-[0_10px_28px_hsl(var(--hero-blue)/0.25)]">
+                <p className="text-xs uppercase tracking-[0.32em] text-muted-foreground mb-8">Portfolio</p>
+                <h2 className="relative inline-block font-display text-5xl md:text-6xl font-semibold leading-[0.96] tracking-wide bg-gradient-name bg-clip-text text-transparent drop-shadow-[0_8px_22px_hsl(var(--hero-blue)/0.18)] transition-all duration-700 group-hover:drop-shadow-[0_10px_28px_hsl(var(--hero-purple)/0.22)] after:absolute after:left-0 after:-bottom-3 after:h-px after:w-full after:origin-left after:scale-x-75 after:bg-gradient-name after:opacity-40 after:transition-all after:duration-700 group-hover:after:scale-x-100 group-hover:after:opacity-60">
                   Radhika<br />Shivhare
                 </h2>
               </div>
-              <div className="relative mt-10 space-y-5 animate-fade-up [animation-delay:160ms]">
+              <div className="relative mt-12 space-y-5 animate-fade-up [animation-delay:160ms]">
                 <p className="text-sm font-medium tracking-[0.18em] uppercase text-foreground/80">
                   Aspiring Web Developer | CSE Student
                 </p>

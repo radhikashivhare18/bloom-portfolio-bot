@@ -38,8 +38,8 @@
     --cream-deep: 38 32% 88%;
     --peach: 22 78% 64%;
     --ink: 140 28% 10%;
-    --hero-purple: 262 86% 66%;
-    --hero-blue: 214 92% 62%;
+    --hero-purple: 262 58% 76%;
+    --hero-blue: 213 72% 74%;
 
     --destructive: 0 70% 50%;
     --destructive-foreground: 42 38% 96%;
@@ -56,10 +56,10 @@
                      linear-gradient(180deg, hsl(42 38% 95%), hsl(38 32% 92%));
     --gradient-sage: linear-gradient(135deg, hsl(140 22% 24%), hsl(140 28% 18%));
     --gradient-warm: linear-gradient(135deg, hsl(22 78% 64%), hsl(22 70% 56%));
-    --gradient-hero-card: radial-gradient(circle at 18% 12%, hsl(var(--hero-purple) / 0.28), transparent 34%),
-                          radial-gradient(circle at 88% 82%, hsl(var(--hero-blue) / 0.24), transparent 38%),
-                          linear-gradient(145deg, hsl(var(--card) / 0.72), hsl(var(--background) / 0.48));
-    --gradient-name: linear-gradient(110deg, hsl(var(--hero-purple)), hsl(var(--hero-blue)) 72%);
+    --gradient-hero-card: radial-gradient(circle at 18% 12%, hsl(var(--hero-purple) / 0.22), transparent 38%),
+                          radial-gradient(circle at 88% 82%, hsl(var(--hero-blue) / 0.2), transparent 42%),
+                          linear-gradient(145deg, hsl(var(--card) / 0.78), hsl(var(--background) / 0.58));
+    --gradient-name: linear-gradient(110deg, hsl(var(--hero-purple) / 0.95), hsl(var(--hero-blue) / 0.95) 74%);
 
     /* Shadows */
     --shadow-soft: 0 4px 20px -4px hsl(140 22% 24% / 0.08);
@@ -67,7 +67,7 @@
     --shadow-glow: 0 0 50px hsl(22 78% 64% / 0.25);
     --shadow-3d: 0 30px 60px -25px hsl(140 28% 14% / 0.25), 0 12px 25px -10px hsl(140 22% 24% / 0.15);
     --shadow-lift: 0 18px 40px -18px hsl(140 28% 14% / 0.35);
-    --shadow-hero: 0 34px 80px -34px hsl(var(--hero-blue) / 0.46), 0 18px 42px -24px hsl(var(--hero-purple) / 0.36);
+    --shadow-hero: 0 28px 70px -42px hsl(var(--hero-blue) / 0.34), 0 14px 34px -26px hsl(var(--hero-purple) / 0.26);
 
     /* Motion */
     --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
