@@ -62,6 +62,10 @@ export default {
         },
         peach: "hsl(var(--peach))",
         ink: "hsl(var(--ink))",
+        hero: {
+          purple: "hsl(var(--hero-purple))",
+          blue: "hsl(var(--hero-blue))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -77,6 +81,8 @@ export default {
         "gradient-hero": "var(--gradient-hero)",
         "gradient-sage": "var(--gradient-sage)",
         "gradient-warm": "var(--gradient-warm)",
+        "gradient-hero-card": "var(--gradient-hero-card)",
+        "gradient-name": "var(--gradient-name)",
       },
       boxShadow: {
         soft: "var(--shadow-soft)",
@@ -84,6 +90,7 @@ export default {
         glow: "var(--shadow-glow)",
         "3d": "var(--shadow-3d)",
         lift: "var(--shadow-lift)",
+        hero: "var(--shadow-hero)",
       },
       borderRadius: {
         lg: "var(--radius)",
