@@ -5,6 +5,8 @@ import safespaceImg from "@/assets/project-safespace.jpg";
 import { TiltCard } from "@/components/TiltCard";
 
 const easeOut = [0.22, 1, 0.36, 1] as const;
+const heroProfileImage = null as string | null;
+const heroProfileAlt = "Radhika Shivhare profile picture";
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 24 },
@@ -120,19 +122,36 @@ const Hero = () => {
             <div className="absolute -inset-6 rounded-[2rem] bg-gradient-to-br from-hero-purple/20 via-hero-blue/15 to-transparent blur-3xl opacity-80" aria-hidden />
             <div className="relative overflow-hidden rounded-[2rem] border border-background/70 bg-gradient-hero-card p-8 md:p-11 shadow-hero backdrop-blur-xl animate-float min-h-[420px] flex flex-col justify-center">
               <div className="pointer-events-none absolute inset-px rounded-[2rem] border border-background/50" aria-hidden />
-              <div className="relative animate-fade-up">
-                <p className="text-xs uppercase tracking-[0.32em] text-muted-foreground mb-8">Portfolio</p>
-                <h2 className="relative inline-block font-display text-5xl md:text-6xl font-semibold leading-[0.96] tracking-wide bg-gradient-name bg-clip-text text-transparent drop-shadow-[0_8px_22px_hsl(var(--hero-blue)/0.18)] transition-all duration-700 group-hover:drop-shadow-[0_10px_28px_hsl(var(--hero-purple)/0.22)] after:absolute after:left-0 after:-bottom-3 after:h-px after:w-full after:origin-left after:scale-x-75 after:bg-gradient-name after:opacity-40 after:transition-all after:duration-700 group-hover:after:scale-x-100 group-hover:after:opacity-60">
-                  Radhika<br />Shivhare
-                </h2>
-              </div>
-              <div className="relative mt-12 space-y-5 animate-fade-up [animation-delay:160ms]">
-                <p className="text-sm font-medium tracking-[0.18em] uppercase text-foreground/80">
-                  Aspiring Web Developer | CSE Student
-                </p>
-                <p className="max-w-sm text-lg text-muted-foreground leading-relaxed">
-                  Building technology for mental health support and impact
-                </p>
+              <div className={`relative grid items-center gap-10 ${heroProfileImage ? "md:grid-cols-[minmax(0,1fr)_180px]" : ""}`}>
+                <div>
+                  <div className="relative animate-fade-up">
+                    <p className="text-xs uppercase tracking-[0.32em] text-muted-foreground mb-8">Portfolio</p>
+                    <h2 className="relative inline-block font-display text-5xl md:text-6xl font-semibold leading-[0.96] tracking-wide bg-gradient-name bg-clip-text text-transparent drop-shadow-[0_8px_22px_hsl(var(--hero-blue)/0.18)] transition-all duration-700 group-hover:drop-shadow-[0_10px_28px_hsl(var(--hero-purple)/0.22)] after:absolute after:left-0 after:-bottom-3 after:h-px after:w-full after:origin-left after:scale-x-75 after:bg-gradient-name after:opacity-40 after:transition-all after:duration-700 group-hover:after:scale-x-100 group-hover:after:opacity-60">
+                      Radhika<br />Shivhare
+                    </h2>
+                  </div>
+                  <div className="relative mt-12 space-y-5 animate-fade-up [animation-delay:160ms]">
+                    <p className="text-sm font-medium tracking-[0.18em] uppercase text-foreground/80">
+                      Aspiring Web Developer | CSE Student
+                    </p>
+                    <p className="max-w-sm text-lg text-muted-foreground leading-relaxed">
+                      Building technology for mental health support and impact
+                    </p>
+                  </div>
+                </div>
+                {heroProfileImage && (
+                  <div className="justify-self-center md:justify-self-end animate-fade-up [animation-delay:240ms]">
+                    <div className="relative h-36 w-36 md:h-44 md:w-44 overflow-hidden rounded-[2rem] border border-background/70 bg-background/35 shadow-hero backdrop-blur-sm">
+                      <img
+                        src={heroProfileImage}
+                        alt={heroProfileAlt}
+                        width={320}
+                        height={320}
+                        className="h-full w-full object-cover"
+                      />
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
             <div className="absolute -bottom-6 -left-6 glass rounded-2xl px-5 py-4 shadow-lift hidden sm:block animate-float" style={{ animationDelay: "1.5s" }}>
