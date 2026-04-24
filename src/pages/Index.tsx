@@ -117,20 +117,21 @@ const Hero = () => {
           className="lg:col-span-5 relative"
         >
           <TiltCard max={8} lift={4} className="rounded-[2rem]">
-            <div className="absolute -inset-6 rounded-[2rem] bg-sage-light/40 blur-2xl" aria-hidden />
-            <div className="relative overflow-hidden rounded-[2rem] border border-border/60 glass p-8 md:p-10 shadow-3d animate-float min-h-[420px] flex flex-col justify-between">
-              <div>
-                <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground mb-6">Portfolio</p>
-                <h2 className="font-display text-5xl md:text-6xl font-light leading-[0.95]">
+            <div className="absolute -inset-8 rounded-[2rem] bg-gradient-to-br from-hero-purple/30 via-hero-blue/20 to-transparent blur-3xl" aria-hidden />
+            <div className="relative overflow-hidden rounded-[2rem] border border-background/70 bg-gradient-hero-card p-8 md:p-10 shadow-hero backdrop-blur-xl animate-float min-h-[420px] flex flex-col justify-center">
+              <div className="pointer-events-none absolute inset-px rounded-[2rem] border border-background/50" aria-hidden />
+              <div className="relative animate-fade-up">
+                <p className="text-xs uppercase tracking-[0.32em] text-muted-foreground mb-7">Portfolio</p>
+                <h2 className="font-display text-5xl md:text-6xl font-bold leading-[0.94] tracking-wide bg-gradient-name bg-clip-text text-transparent drop-shadow-[0_10px_28px_hsl(var(--hero-blue)/0.25)]">
                   Radhika<br />Shivhare
                 </h2>
               </div>
-              <div className="space-y-5">
-                <p className="inline-flex rounded-full bg-secondary/60 px-4 py-2 text-sm text-secondary-foreground">
-                  First-year CSE student
+              <div className="relative mt-10 space-y-5 animate-fade-up [animation-delay:160ms]">
+                <p className="text-sm font-medium tracking-[0.18em] uppercase text-foreground/80">
+                  Aspiring Web Developer | CSE Student
                 </p>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  Learning C & C++, building toward web development, and shaping mental-health tech for students.
+                <p className="max-w-sm text-lg text-muted-foreground leading-relaxed">
+                  Building technology for mental health support and impact
                 </p>
               </div>
             </div>
