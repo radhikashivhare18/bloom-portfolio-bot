@@ -1,7 +1,6 @@
 import { motion, useScroll, useTransform, type Variants } from "framer-motion";
 import { useRef } from "react";
 import { Github, Linkedin, Mail, ArrowDown, Sparkles } from "lucide-react";
-import heroPortrait from "@/assets/hero-portrait.jpg";
 import safespaceImg from "@/assets/project-safespace.jpg";
 import { TiltCard } from "@/components/TiltCard";
 
@@ -119,14 +118,21 @@ const Hero = () => {
         >
           <TiltCard max={8} lift={4} className="rounded-[2rem]">
             <div className="absolute -inset-6 rounded-[2rem] bg-sage-light/40 blur-2xl" aria-hidden />
-            <div className="relative overflow-hidden rounded-[2rem] border border-border/60 shadow-3d animate-float">
-              <img
-                src={heroPortrait}
-                alt="Illustrated portrait with botanical elements"
-                width={1024}
-                height={1280}
-                className="w-full h-auto"
-              />
+            <div className="relative overflow-hidden rounded-[2rem] border border-border/60 glass p-8 md:p-10 shadow-3d animate-float min-h-[420px] flex flex-col justify-between">
+              <div>
+                <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground mb-6">Portfolio</p>
+                <h2 className="font-display text-5xl md:text-6xl font-light leading-[0.95]">
+                  Radhika<br />Shivhare
+                </h2>
+              </div>
+              <div className="space-y-5">
+                <p className="inline-flex rounded-full bg-secondary/60 px-4 py-2 text-sm text-secondary-foreground">
+                  First-year CSE student
+                </p>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Learning C & C++, building toward web development, and shaping mental-health tech for students.
+                </p>
+              </div>
             </div>
             <div className="absolute -bottom-6 -left-6 glass rounded-2xl px-5 py-4 shadow-lift hidden sm:block animate-float" style={{ animationDelay: "1.5s" }}>
               <p className="text-xs uppercase tracking-widest text-muted-foreground">Currently</p>
