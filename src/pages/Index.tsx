@@ -186,3 +186,11 @@ const Hero = () => {
     </section>
   );
 };
+const Index = () => (
+  <main>
+    <Nav />
+    <Hero />
+  </main>
+);
+
+export default Index;
